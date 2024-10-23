@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patintero Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h1 class="card-title">Patintero Game</h1>
+            <div id="game-info" class="game-info">
+                <p id="group-display">Group 1 vs Group 2</p>
+                <p id="game-display">Game 1</p>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="grid header">
+                <div>Line</div>
+                <div>Points</div>
+                <div>Input (0-10)</div>
+                <div>Score</div>
+                <div>Actions</div>
+            </div>
+            <div id="lines-container"></div>
+            <button id="add-line" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Add Line
+            </button>
+            <div class="grid penalties">
+                <label for="penalties" class="font-semibold">Penalties</label>
+                <input type="number" id="penalties" min="0" aria-label="Penalties">
+                <span id="penalties-display" class="font-medium">-0</span>
+            </div>
+            <div class="total-score">
+                <span class="font-bold">Total Score:</span>
+                <span id="total-score" class="font-bold" aria-live="polite">0</span>
+            </div>
+            <div class="group-inputs">
+                <div class="group-input">
+                    <label for="group1">Group</label>
+                    <input type="number" id="group1" value="1" min="1" max="99" class="group-number">
+                    <span>vs Group</span>
+                    <input type="number" id="group2" value="2" min="1" max="99" class="group-number">
+                </div>
+                <div class="game-number">
+                    <label for="gameNumber">Game</label>
+                    <input type="number" id="gameNumber" value="1" min="1" max="99" class="group-number">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
