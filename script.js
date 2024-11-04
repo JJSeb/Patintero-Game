@@ -2,8 +2,11 @@ let lines = [
     { id: 1, name: 'LINE 1', points: 1, input: 0, score: 0 },
     { id: 2, name: 'LINE 2', points: 2, input: 0, score: 0 },
     { id: 3, name: 'LINE 3', points: 3, input: 0, score: 0 },
-    { id: 4, name: 'LINE 4', points: 4, input: 0, score: 0 },
-    { id: 5, name: 'LINE 5', points: 5, input: 0, score: 0 },
+    { id: 4, name: 'MIDPOINT', points: 4, input: 0, score: 0 },
+    { id: 5, name: 'LINE 5', points: 6, input: 0, score: 0 },
+	{ id: 6, name: 'LINE 6', points: 7, input: 0, score: 0 },
+    { id: 7, name: 'LINE 7', points: 8, input: 0, score: 0 },
+    { id: 8, name: 'LINE 8', points: 9, input: 0, score: 0 },
 ];
 
 let penalties = 0;
@@ -133,7 +136,7 @@ function addLine() {
 
 function updateTotal() {
     const total = lines.reduce((sum, line) => sum + line.score, 0) - penalties;
-    document.getElementById('total-score').textContent = Math.max(0, total);
+    document.getElementById('total-score').textContent = total;
 }
 
 function updateGameInfo() {
